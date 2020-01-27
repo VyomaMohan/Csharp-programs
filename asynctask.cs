@@ -23,19 +23,19 @@ namespace Learncs4
             var dogBarkTask =  dogBarkAsync(1);
             var alltask = new List<Task> { catMeowTask, dogBarkTask };
             Console.WriteLine("tasks");
-            //while (alltask.any())
-            //{
-            //    task finished = await task.whenany(alltask);
-            //    if (finished == catmeowtask)
-            //    {
-            //        console.writeline("cat has meowed");
-            //    }
-            //    if (finished == dogbarktask)
-            //    {
-            //        console.writeline("dog has barked");
-            //    }
-            //    alltask.remove(finished);
-            //}
+            while (alltask.any())
+            {
+                task finished = await task.whenany(alltask);
+                if (finished == catmeowtask)
+                {
+                    console.writeline("cat has meowed");
+                }
+                if (finished == dogbarktask)
+                {
+                    console.writeline("dog has barked");
+                }
+                alltask.remove(finished);
+            }
 
         }
 
